@@ -1,31 +1,24 @@
 
 const Item = ({id, name, price,img, stock}) => {
     return(
-        <article className="CardItem">
-            <header className="header">
-                <h2 className="ItemHeader">
-                    {name}
-                </h2>
-            </header>
+        <div className="d-flex justify-content-around align-items-center flex-wrap m-2">
+            <div className="items d-flex flex-column justify-content-center align-items-center rounded" >
+                <div className="item">
+                    <img src={img} alt={name} width="150px"  height="100px" />
+                </div>
 
-            <picture>
-                <img src={img} alt={name} className = "ItemImg" />
-            </picture>
+                <h2 className="text-center">{name}</h2>
 
-            <section>
-                <p className="info">
-                    Precio: ${price}
-                </p>
+                <p>Precio: <span>${price}</span></p>
 
                 <p className="info">
                     Stock Disponible: {stock}
                 </p>
-            </section>
-
-            <footer className="ItemFooter">
                 <button className="Option">Ver Detalle</button>
-            </footer>
-        </article>
+
+                <button className="add-to-cart btn btn-outline-success" type="button">Add to cart</button>
+            </div>
+        </div>
     )
 }
 

@@ -21,23 +21,3 @@ function App(){
 
 export default App;
 
-/*// Componente para ItemListContainer con categoría
-const ItemListContainerWithCategory = () => {
-  const { categoryId } = useParams();
-
-  // Utiliza el hook useEffect para cargar los productos de la categoría
-  useEffect(() => {
-    // Lógica para cargar productos de la categoría
-    fetchProducts(categoryId)
-      .then((products) => {
-        // Procesar y mostrar los productos
-      })
-      .catch((error) => {
-        // Manejar errores
-      });
-  }, [categoryId]);
-
-  return (
-    <ItemListContainer greeting={`Productos en la categoría: ${categoryId}`} />
-  );
-};*/
