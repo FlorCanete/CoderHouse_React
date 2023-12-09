@@ -1,4 +1,3 @@
-// ProductDetail.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchProduct } from '../api';
@@ -22,7 +21,6 @@ const ProductDetail = () => {
         <div>
           <h2>{product.name}</h2>
           <p>{product.description}</p>
-          {/* Otros detalles del producto */}
         </div>
       ) : (
         <p>Cargando...</p>

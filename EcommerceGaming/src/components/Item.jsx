@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Item = ({id, name, price,img, stock}) => {
     return(
@@ -14,7 +15,8 @@ const Item = ({id, name, price,img, stock}) => {
                 <p className="info">
                     Stock Disponible: {stock}
                 </p>
-                <button className="Option">Ver Detalle</button>
+
+                <Link to={'/item/${$id}'}  className="Option">Ver detalle</Link>
 
                 <button className="add-to-cart btn btn-outline-success" type="button">Add to cart</button>
             </div>

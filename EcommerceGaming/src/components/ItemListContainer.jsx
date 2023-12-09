@@ -1,4 +1,3 @@
-// ItemListContainer.js
 
 import { useState, useEffect } from "react";
 import { getProducts, getProductsByCategory } from '../asyncMock';
