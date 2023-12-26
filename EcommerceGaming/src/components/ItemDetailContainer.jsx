@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
     }, [itemId])
 
     return(
-        <div className='ItemDetailContainer'>
+        <div className='ItemDetailContainer h-100 d-flex justify-content-center align-items-center' >
             <ItemDetail {...product}/>
         </div>
     )

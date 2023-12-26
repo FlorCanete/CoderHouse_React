@@ -1,6 +1,25 @@
 import { Link } from "react-router-dom";
+import ItemCount from './ItemCount';
+import { useContext } from 'react';
+import { useState } from 'react';
+import ItemDetailContainer from './ItemDetailContainer';
+
+import { CartContext } from './Cart.Context';
 
 const Item = ({id, name, price,img, stock}) => {
+    const [quantityAdded, setQuantityAdded] = useState(0);
+
+    const { addItem } = useContext(CartContext)
+
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
+
+        const item = {
+            id, name, price
+        }
+
+        addItem(item, quantity)
+    }
     return(
         <div className="d-flex justify-content-around align-items-center flex-wrap m-2">
             <div className="items d-flex flex-column justify-content-center align-items-center rounded" >
@@ -16,9 +35,9 @@ const Item = ({id, name, price,img, stock}) => {
                     Stock Disponible: {stock}
                 </p>
 
-                <Link to={'/item/${$id}'}  className="Option">Ver detalle</Link>
+                <Link to={`/item/${id}`} className="Option">Ver detalle</Link>
 
-                <button className="add-to-cart btn btn-outline-success" type="button">Add to cart</button>
+                <ItemCount id={id} stock={stock} initial={0} onAdd={handleOnAdd} />
             </div>
         </div>
     )

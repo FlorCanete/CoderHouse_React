@@ -1,4 +1,16 @@
 /* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+#root{
+  height: 100%;
+}
 .cart-widget {
   display: flex;
   align-items: center;
@@ -8,7 +20,7 @@
 .items{
   background-color:#E6E6E8;
   width: 300px;
-  height: 300px;
+  height: auto;
 }
 .items .item img
 {
@@ -18,4 +30,47 @@
 {
   list-style-type: none;
   font-weight: bold;
+}
+
+.ItemDetailContainer{
+  background-color: #fdf1ec;
+
+}
+.CardItem{
+  height: 420px;
+  width: 655px;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.CardInfo{
+  height: 300px;
+  width: 327px;
+}
+
+.ItemHeader{
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+.Info-Category{
+  margin: 0 0 50px 50px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.Info-Description{
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
 }

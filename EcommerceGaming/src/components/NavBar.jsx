@@ -9,7 +9,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between px-5" data-bs-theme="dark">
       <div className="container-fluid">
         <Link to='/' className='navbar-brand'>
-          <img src="./src/images/logo.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"/>
+          <img src="../src/images/logo.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"/>
           Harcode Games
         </Link>
         <div className="collapse navbar-collapse justify-content-end " id="navbarNav">
