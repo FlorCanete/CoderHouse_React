@@ -44,7 +44,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 </p>
 
                 <div className='d-flex flex-column align-items-center'>
-                    {quantityAdded > 0 ? (
+                    { quantityAdded >= 1 ? (
                         <Link to='/cart' className='Option'>
                             Terminar Compra
                         </Link>

@@ -1,23 +1,18 @@
 import { useState } from "react";
-import { onAdd } from "react";
 
-const ItemCount = ({ id, stock, initial, onAdd}) => {
+const ItemCount = ({ id, stock, initial, onAdd }) => {
     const [quantity, setQuantity] = useState(initial);
 
     const increment = () => {
-        if(quantity < stock){
-            setQuantity(quantity+1)
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
         }
-    }
+    };
 
     const decrement = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
-    }
-
-    const addToCart = () => {
-        onAdd(id, quantity);
     };
 
     return (
@@ -35,12 +30,14 @@ const ItemCount = ({ id, stock, initial, onAdd}) => {
             </div>
 
             <div className="w-100 d-flex justify-content-center my-3">
-                <button className="button btn btn-success" onClick={()=>onAdd(this, quantity)} disabled={stock < 0}>
+                <button className="button btn btn-success" onClick={() => onAdd(quantity)} disabled={stock < 1}>
                     Agregar al Carrito
-                 </button>
+                </button>
             </div>
         </div>
     );
-}
+};
 
 export default ItemCount;
+
+

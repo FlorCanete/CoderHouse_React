@@ -9,12 +9,10 @@ const CartWidget = () => {
 
   return (
     <Link to='/cart' className="cart-widget text-light">
-      <i className="fas fa-shopping-cart"></i>
+      <i className="fas fa-shopping-cart {{cart}}"></i>
       { totalQuantity }
     </Link>
   );
-  console.log(totalQuantity);
-
 };
 
 export default CartWidget;

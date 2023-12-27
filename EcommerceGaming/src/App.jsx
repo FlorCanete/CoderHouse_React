@@ -8,8 +8,9 @@ import Cart from './components/Cart';
 function App(){
   return(
     <div className="App h-100">
-      <CartProvider>
         <BrowserRouter>
+          <CartProvider>
+
             <NavBar/>
 
             <Routes>
@@ -19,8 +20,8 @@ function App(){
               <Route path ='/cart' element={<Cart/>}/>
               <Route path ='*' element={<h1>404 NOT FOUND </h1>}/>
             </Routes>
+          </CartProvider>
         </BrowserRouter>
-      </CartProvider>
     </div>
   )
 }
